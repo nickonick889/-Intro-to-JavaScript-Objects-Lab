@@ -102,10 +102,39 @@ game.gyms.forEach(gyms => {
 //console.log(game)
 
 // Exercise 13
+game.gymStatus = function () {
+  const gymTally = {
+    completed: 0,
+    incomplete: 0
+  };
+
+  for (let i = 0; i < this.gyms.length; i++) {
+    if (this.gyms[i].completed === true) {
+      gymTally.completed++;
+    } else {
+      gymTally.incomplete++;
+    }
+  }
+
+  console.log(gymTally);
+};
+
+//game.gymStatus();
 
 
 // Exercise 14
+game.partyCount = function () {
+  return this.party.length;
+};
+//console.log(game.partyCount());
 
 // Exercise 15
+game.gyms.forEach(gyms => {
+   if (gyms.difficulty <= 7) {
+    gyms.completed = true;
+   }
+});
+//console.log(game)
 
 // Exercise 16
+console.log(game)
