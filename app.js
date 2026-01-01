@@ -71,18 +71,38 @@ for (let gang of game.party) {
 // Exercise 9 
 pokemon.forEach(pokemon => {
   if (pokemon.starter === true) {
-   console.log(pokemon.name); 
+   //console.log(pokemon.name); 
   } 
 });
  
 // Exercise 10 
-
+game.catchPokemon = function(pokemonObj) {
+  this.party.push(pokemonObj);
+};
 
 // Exercise 11
+game.catchPokemon = function(pokemonObj) {
+  this.party.push(pokemonObj);
+  const pokeball = game.items.find(item => 
+    item.name === "pokeball");
+pokeball.quantity--; 
+};
+
+game.catchPokemon();
+
+//console.log(game);
 
 // Exercise 12
 
+game.gyms.forEach(gyms => {
+   if (gyms.difficulty <= 6) {
+    gyms.completed = true;
+   }
+});
+//console.log(game)
+
 // Exercise 13
+
 
 // Exercise 14
 
