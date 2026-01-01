@@ -17,35 +17,57 @@ const game = {
     { name: "pokeball", quantity: 8 },
     { name: "rare candy", quantity: 99 },
   ],
+  difficulty:[],
 }
 
 //console.dir(pokemon, { maxArrayLength: null })
 
 
 // Exercise 1 
-const pokemon59 = (number) => {
+const pokemonid = (number) => {
     return result = pokemon.find((pokemon) => {
     return pokemon.number === number;
 })
 }
-return result
 
-console.log(result);
+//console.log(pokemonid(59).name);
 
-console.log(pokemon59(59));
 // Exercise 2 
 
+//console.log(game)
+
 // Exercise 3 
+game.difficulty = "Med"
+//console.log(game)
 
 // Exercise 4 
+//console.log(pokemonid(25).name);
+game.party.push (pokemonid(25).name);
+//console.log(game)
 
 // Exercise 5
+game.party.push (pokemonid(16).name, pokemonid(50).name, pokemonid(101).name);
+//console.log(game)
 
 // Exercise 6 
+game.gyms.forEach(gyms => {
+   if (gyms.difficulty <= 2) {
+    gyms.completed = true;
+   }
+});
+
+//console.log(game)
 
 // Exercise 7 
+game.party.splice(0,1,pokemonid(26).name)
+
+//console.log(game)
 
 // Exercise 8
+for (let gang of game.party) {
+  console.log(gang);
+}
+
 
 // Exercise 9 
 
