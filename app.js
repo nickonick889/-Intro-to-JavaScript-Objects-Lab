@@ -65,13 +65,18 @@ game.party.splice(0,1,pokemonid(26).name)
 
 // Exercise 8
 for (let gang of game.party) {
-  console.log(gang);
+  //console.log(gang);
 }
 
-
 // Exercise 9 
-
+pokemon.forEach(pokemon => {
+  if (pokemon.starter === true) {
+   console.log(pokemon.name); 
+  } 
+});
+ 
 // Exercise 10 
+
 
 // Exercise 11
 
